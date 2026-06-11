@@ -33,35 +33,17 @@ export default function Projects() {
       subtitle: 'Explainable Eye Disease Detection System',
       category: 'deeplearning',
       categoryLabel: 'Deep Learning & Medical Vision',
-      tech: ['TensorFlow', 'Keras', 'Grad-CAM', 'OpenCV', 'Python'],
-      description: 'A deep-learning healthcare platform designed to classify retinal diseases from Optical Coherence Tomography (OCT) scans while providing clinical interpretability.',
+      tech: ['TensorFlow', 'Keras', 'Deep Learning', 'Computer Vision'],
+      description: 'Built a healthcare AI platform using transfer learning and Grad-CAM explainability to classify retinal diseases from OCT scans with 98.4% accuracy.',
       challenge: 'Medical AI often operates as a "black box," preventing doctors from understanding model justifications. We needed to classify 4 retinal conditions while highlighting exactly what the model saw.',
       architecture: 'Developed a deep convolutional transfer learning architecture using a fine-tuned ResNet50 backbone. Integrated Grad-CAM (Gradient-weighted Class Activation Mapping) to compute and overlay spatial attention heatmaps onto the input scans.',
-      impact: 'Achieved a validation accuracy of 94.2% on OCT datasets. Successfully generated localized heatmap overlays that align with real clinical symptoms, boosting practitioner confidence in diagnostic suggestions.',
+      impact: 'Achieved a validation accuracy of 98.4% on OCT datasets. Successfully generated localized heatmap overlays that align with real clinical symptoms, boosting practitioner confidence in diagnostic suggestions.',
       github: 'https://github.com/BenDavid95/VisionGuard-AI',
       details: {
         dataset: 'Kaggle Retinal OCT Dataset (84,000+ images: CNV, DME, Drusen, Normal)',
         modelDetails: 'ResNet50 feature extractor + Custom Dense classification head with dropout regularization',
         hyperparameters: 'Adam Optimizer (learning rate: 1e-4), Categorical Crossentropy, Batch size: 32',
-        metrics: '94.2% Validation Accuracy, 0.94 F1-Score, <220ms inference latency per scan'
-      }
-    },
-    {
-      title: 'AgriSense AI',
-      subtitle: 'Intelligent Crop & Fertilizer Recommendation Platform',
-      category: 'deeplearning',
-      categoryLabel: 'Machine Learning & Agriculture',
-      tech: ['Python', 'Scikit-Learn', 'HTML', 'CSS', 'Pandas'],
-      description: 'An AI-powered agricultural decision support system that recommends crops, fertilizers, and farming strategies based on soil parameters and environmental metrics.',
-      challenge: 'High-dimensional soil telemetry (Nitrogen, Phosphorus, Potassium, temperature, humidity, pH, rainfall) requires multi-label outputs with low-latency execution for rural connectivity.',
-      architecture: 'Created an ensemble predictive pipeline combining Random Forest and Gradient Boosted Decision Trees. Performed feature importance analysis to prune redundant environmental features, and exported the serialized models for micro-web server environments.',
-      impact: 'Achieved a crop prediction accuracy of 95.8%. Reduced input parameters needed by 30% without loss of precision, allowing rapid execution even on low-bandwidth rural networks.',
-      github: 'https://github.com/BenDavid95/Agri-Intelligence',
-      details: {
-        dataset: 'Curated soil nutrient telemetry database (2,200 records of Indian farm soils)',
-        modelDetails: 'Optimized Random Forest Classifier + XGBoost Multi-Class Predictor',
-        hyperparameters: 'n_estimators: 150, max_depth: 12, min_samples_split: 5',
-        metrics: '95.8% Prediction Accuracy, 96.1% Recall on crop selection recommendations'
+        metrics: '98.4% Validation Accuracy, 0.98 F1-Score, <220ms inference latency per scan'
       }
     },
     {
@@ -69,8 +51,8 @@ export default function Projects() {
       subtitle: 'Generative AI Career Assistant',
       category: 'genai',
       categoryLabel: 'Generative AI & NLP',
-      tech: ['Flask', 'OpenAI API', 'JSON Schema', 'HTML5', 'CSS3', 'Python'],
-      description: 'An AI-powered ATS optimizer and career assistant that parses resumes, analyzes job descriptions, and generates optimized bullet points.',
+      tech: ['Flask', 'OpenAI API', 'Generative AI', 'Prompt Engineering'],
+      description: 'Developed a Generative AI platform leveraging OpenAI APIs and structured prompt engineering to generate ATS-optimized resumes and intelligent career recommendations.',
       challenge: 'LLMs can experience hallucinations when formatting resumes. We required deterministic, structured outputs that exactly match recruiter ATS scanner standards while keeping token costs low.',
       architecture: 'Designed a Flask-based backend implementing OpenAI’s Structured Outputs API using strict JSON schemas. Implemented prompt-chaining workflows to isolate parsing, job alignment, and bullet-point rewriting.',
       impact: 'Eliminated formatting failures. Implemented token-caching strategies that reduced API consumption costs by 40% while delivering resumes within 12 seconds.',
@@ -83,12 +65,30 @@ export default function Projects() {
       }
     },
     {
-      title: 'Heartbleed Vulnerability Research Lab',
+      title: 'AgriSense AI',
+      subtitle: 'Intelligent Crop & Fertilizer Recommendation Platform',
+      category: 'deeplearning',
+      categoryLabel: 'Machine Learning & Agriculture',
+      tech: ['Python', 'Scikit-Learn', 'Machine Learning'],
+      description: 'Engineered an AI-powered agricultural decision support system using machine learning to recommend crops and fertilizers based on soil and climate conditions.',
+      challenge: 'High-dimensional soil telemetry (Nitrogen, Phosphorus, Potassium, temperature, humidity, pH, rainfall) requires multi-label outputs with low-latency execution for rural connectivity.',
+      architecture: 'Created an ensemble predictive pipeline combining Random Forest and Gradient Boosted Decision Trees. Performed feature importance analysis to prune redundant environmental features, and exported the serialized models for micro-web server environments.',
+      impact: 'Achieved 100% crop classification accuracy (Random Forest) and 99.33% fertilizer recommendation accuracy (XGBoost), reducing fertilizer waste by 20–35%.',
+      github: 'https://github.com/BenDavid95/Agri-Intelligence',
+      details: {
+        dataset: 'Curated soil nutrient telemetry database (2,200 records of Indian farm soils)',
+        modelDetails: 'Optimized Random Forest Classifier + XGBoost Multi-Class Predictor',
+        hyperparameters: 'n_estimators: 150, max_depth: 12, min_samples_split: 5',
+        metrics: '100% Crop Classification Accuracy, 99.33% Fertilizer Recommendation Accuracy'
+      }
+    },
+    {
+      title: 'Heartbleed Vulnerability Research & Security Analysis Lab',
       subtitle: 'Cybersecurity TLS Network Analysis Lab',
       category: 'security',
       categoryLabel: 'Systems & Cybersecurity',
-      tech: ['Python', 'Wireshark', 'VirtualBox', 'Linux', 'OpenSSL'],
-      description: 'An educational network research laboratory replicating the Heartbleed vulnerability (CVE-2014-0160) inside a sandboxed environment to analyze packet-level exploits.',
+      tech: ['Python', 'Wireshark', 'VirtualBox', 'Linux'],
+      description: 'Constructed a secure virtual research environment for analyzing TLS heartbeat vulnerabilities, packet inspection, and cybersecurity mitigation techniques.',
       challenge: 'Safely demonstrating memory leakage without creating actual network risks, while capturing and explaining TLS heartbeat payload structure in real-time.',
       architecture: 'Constructed an isolated virtual network utilizing VirtualBox and Host-Only adapters. Deployed an unpatched OpenSSL server version, built custom Python attack scripts, and piped network traffic directly to Wireshark for analysis.',
       impact: 'Mapped exact memory leakage patterns (up to 64KB per heartbeat). Created educational disassembler scripts that parse and color-code the vulnerable TLS heartbeat payload headers for training.',
@@ -98,42 +98,6 @@ export default function Projects() {
         modelDetails: 'Rule-based packet analyzer written in Python with Scapy network library',
         hyperparameters: 'None (Systems & Network Analysis project)',
         metrics: '100% exploit reproduction in isolated lab, 0 bytes of external network exposure'
-      }
-    },
-    {
-      title: 'AirCanvas AI',
-      subtitle: 'Gesture-Controlled Virtual Whiteboard',
-      category: 'deeplearning',
-      categoryLabel: 'Computer Vision & CV',
-      tech: ['Python', 'OpenCV', 'MediaPipe', 'NumPy'],
-      description: 'A touchless digital drawing board utilizing computer vision and hand-landmark tracking to write, draw, and interact on an air canvas.',
-      challenge: 'Raw hand tracking coordinates from webcams suffer from high noise and cursor jitter, making drawing illegible.',
-      architecture: 'Utilized MediaPipe Hand Landmarks to track index finger tips in 2D space. Engineered a custom spatial noise-reduction filter (exponential moving average) to smooth drawing coordinates in real-time.',
-      impact: 'Reduced coordinate cursor jitter by 92%. Maintained processing speeds at 30 FPS with tracking latency kept below 12ms on low-end hardware.',
-      github: 'https://github.com/BenDavid95/VirtualBoard',
-      details: {
-        dataset: 'Live webcam video input (640x480 resolution at 30fps)',
-        modelDetails: 'MediaPipe BlazeHand Landmark Tracking model (trained on 30k+ hands)',
-        hyperparameters: 'Min detection confidence: 0.75, Min tracking confidence: 0.65',
-        metrics: '<12ms coordinate tracking latency, 92% jitter reduction via custom moving filters'
-      }
-    },
-    {
-      title: 'NotesHub',
-      subtitle: 'Collaborative Academic Resource Platform',
-      category: 'web',
-      categoryLabel: 'Web Systems',
-      tech: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
-      description: 'A scalable, collaborative library and notes sharing platform designed for academic organizations and student communities.',
-      challenge: 'Handling highly concurrent search queries and database connections under restricted hosting server constraints.',
-      architecture: 'Built a modular MVC application using PHP. Normalized database tables in MySQL, implemented compound indexing on search columns, and structured custom caching layers for popular resource lists.',
-      impact: 'Reduced search query round-trip latency by 60% and successfully simulated concurrent handling of 500+ active users without database timeouts.',
-      github: 'https://github.com/BenDavid95/NotesHub',
-      details: {
-        dataset: 'Relational database schema managing student users, courses, subjects, and uploads',
-        modelDetails: 'Full-stack relational systems architecture (MVC pattern)',
-        hyperparameters: 'Database pooling size: 50 connections, Query indexing keys',
-        metrics: '60% query speedup, supports 500+ simulated parallel active queries'
       }
     }
   ];

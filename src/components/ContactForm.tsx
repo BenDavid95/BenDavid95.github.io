@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, CheckCircle2, MessageSquare, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2, MessageSquare, AlertCircle, Phone } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
 
 export default function ContactForm() {
@@ -110,6 +110,18 @@ export default function ContactForm() {
                   <span className="block text-xxs font-mono text-slate-500 uppercase">Direct Email</span>
                   <a href="mailto:bendavid9510@gmail.com" className="text-sm font-semibold hover:text-white transition-colors">
                     bendavid9510@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 text-slate-300">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 border border-white/10">
+                  <Phone className="h-5 w-5 text-accent-indigo" />
+                </div>
+                <div>
+                  <span className="block text-xxs font-mono text-slate-500 uppercase">Call / WhatsApp</span>
+                  <a href="https://wa.me/916382372387" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold hover:text-white transition-colors">
+                    +91 6382372387
                   </a>
                 </div>
               </div>

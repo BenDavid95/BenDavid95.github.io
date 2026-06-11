@@ -10,35 +10,32 @@ export default function ExperienceTimeline() {
       role: 'AI Backend Intern',
       duration: 'Oct 2024 – Mar 2025',
       highlights: [
-        'Engineered high-performance multilingual AI translation pipelines supporting 10+ major languages using Large Language Models and cloud APIs.',
-        'Developed automated summarization and notes generation workflows using OpenAI GPT models, optimizing context windows and prompt templates.',
-        'Created an AI-powered automated quiz generation engine utilizing structured output JSON schemas to ensure reliable backend database insertion.',
-        'Integrated custom LLM routing architectures and external translation APIs, reducing overall response latency and token costs by 35%.'
+        'Architected multilingual AI content translation pipelines supporting 10 languages.',
+        'Engineered automated notes generation systems using Large Language Models.',
+        'Built AI-powered quiz generation workflows.'
       ],
-      skills: ['Generative AI', 'LLM Prompting', 'API Integration', 'Python', 'Flask/FastAPI']
+      skills: ['Generative AI', 'LLMs', 'Prompt Engineering', 'Python', 'Flask/FastAPI']
     },
     {
-      company: 'Intel Corporation',
+      company: 'Intel',
       role: 'Machine Learning Intern',
       duration: 'May 2024 – Jul 2024',
       highlights: [
-        'Researched and developed computer vision and machine learning models for autonomous vehicle cut-in detection.',
-        'Preprocessed large-scale spatial-temporal video sensor datasets, handling image augmentation, data balancing, and feature extraction.',
-        'Trained and evaluated classification models (SVM, Random Forest, CNNs), improving recall rates for critical near-field cut-in events by 8%.',
-        'Operated in a fast-paced Agile development framework, delivering model checkpoint reviews and collaborating on cross-functional sprints.'
+        'Developed ML models for autonomous vehicle cut-in detection.',
+        'Performed feature engineering and data preprocessing.',
+        'Conducted model training and performance evaluation.'
       ],
-      skills: ['Computer Vision', 'Supervised Learning', 'Data Preprocessing', 'Scikit-Learn', 'Agile']
+      skills: ['Machine Learning', 'Feature Engineering', 'Data Preprocessing', 'Model Training', 'Model Evaluation']
     },
     {
       company: 'EverAppTech Solutions',
       role: 'Programming Intern',
       duration: 'May 2024 – Jun 2024',
       highlights: [
-        'Strengthened backend software fundamentals, writing robust, memory-efficient logic modules in C and Python.',
-        'Implemented core algorithms and data structures for file sorting and processing, adhering to clean coding standards.',
-        'Designed database schemas and executed query optimizations under strict code review and testing practices.'
+        'Built backend business logic using Python and C.',
+        'Applied modular software engineering practices.'
       ],
-      skills: ['C Programming', 'Python', 'Data Structures', 'Database Logic', 'Software Engineering']
+      skills: ['Python', 'C Programming', 'Modular Design', 'Backend Logic', 'Software Engineering']
     }
   ];
 

@@ -14,8 +14,9 @@ export default function Hero({ onViewProjects, onContact, onDownloadResume }: He
   const rotatorTexts = [
     'Machine Learning Engineer',
     'Generative AI Developer',
-    'Computer Vision Enthusiast',
-    'Future Tech Founder',
+    'Computer Vision Engineer',
+    'AI Backend Developer',
+    'Cybersecurity Research Enthusiast',
   ];
 
   const [textIndex, setTextIndex] = useState(0);
@@ -29,9 +30,9 @@ export default function Hero({ onViewProjects, onContact, onDownloadResume }: He
 
   const stats = [
     { label: 'Internships Worked', value: '3', icon: Briefcase, color: 'text-accent-blue' },
-    { label: 'Technical Projects', value: '8+', icon: Code, color: 'text-accent-cyan' },
-    { label: 'Professional Certs', value: '14+', icon: Award, color: 'text-accent-purple' },
-    { label: 'Engineering CGPA', value: '8.4', icon: GraduationCap, color: 'text-accent-fuchsia' },
+    { label: 'Major AI Projects', value: '4', icon: Code, color: 'text-accent-cyan' },
+    { label: 'Professional Certs', value: '10+', icon: Award, color: 'text-accent-purple' },
+    { label: 'AI & DS Graduate', value: 'B.Tech', icon: GraduationCap, color: 'text-accent-fuchsia' },
   ];
 
   return (
@@ -95,7 +96,7 @@ export default function Hero({ onViewProjects, onContact, onDownloadResume }: He
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-4 mx-auto sm:mx-0 max-w-2xl text-base text-slate-400 sm:text-lg md:text-xl leading-relaxed"
             >
-              Building AI Systems That Solve Real-World Problems. A final-year Artificial Intelligence & Data Science Engineer passionate about deploying intelligent systems, deep neural architectures, and robust full-stack logic.
+              Building AI Systems, Intelligent Automation, and Real-World Solutions. A results-driven Artificial Intelligence & Data Science Engineer experienced in building scalable ML models, generative AI applications, and secure systems.
             </motion.p>
           </div>
 

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Mail, MapPin, Printer, ArrowLeft, Terminal } from 'lucide-react';
+import { Mail, MapPin, Printer, ArrowLeft, Terminal, Phone, FileDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
 
 interface RecruiterViewProps {
@@ -12,13 +12,6 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
   const handlePrint = () => {
     window.print();
   };
-
-  const certifications = [
-    'Cisco: AI Fundamentals with IBM, JavaScript Essentials 1, JavaScript Essentials 2, Data Analytics Essentials',
-    'Infosys: Deep Learning with TensorFlow, Machine Learning using Python, Tableau and Data Analytics, Agile and GitHub',
-    'Coursera: RPA Basics with UiPath',
-    'NPTEL: Human Computer Interaction, Cybersecurity and Privacy, English for Competitive Exams'
-  ];
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-12 print:py-0">
@@ -40,13 +33,25 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
           </div>
         </div>
 
-        <button
-          onClick={handlePrint}
-          className="flex items-center gap-2 rounded-xl bg-linear-to-r from-accent-purple to-accent-indigo px-5 py-2.5 text-xs font-semibold text-white shadow-lg shadow-accent-purple/20 hover:scale-[1.02] transition-all cursor-pointer"
-        >
-          <Printer className="h-4 w-4" />
-          Print / Save PDF
-        </button>
+        <div className="flex items-center gap-3">
+          <a
+            href="/resume.pdf"
+            download="Bendavid_Walker_Resume.pdf"
+            className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-xs font-semibold text-white hover:bg-white/10 transition-all"
+            title="Download LaTeX PDF Resume"
+          >
+            <FileDown className="h-4 w-4" />
+            Download PDF
+          </a>
+
+          <button
+            onClick={handlePrint}
+            className="flex items-center gap-2 rounded-xl bg-linear-to-r from-accent-purple to-accent-indigo px-5 py-2.5 text-xs font-semibold text-white shadow-lg shadow-accent-purple/20 hover:scale-[1.02] transition-all cursor-pointer"
+          >
+            <Printer className="h-4 w-4" />
+            Print Resume
+          </button>
+        </div>
       </div>
 
       {/* Main Print Container */}
@@ -71,6 +76,10 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
                 <a href="mailto:bendavid9510@gmail.com" className="hover:underline">bendavid9510@gmail.com</a>
               </div>
               <div className="flex items-center gap-2">
+                <Phone className="h-3.5 w-3.5 text-slate-500 shrink-0" />
+                <a href="https://wa.me/916382372387" target="_blank" rel="noopener noreferrer" className="hover:underline">+91 6382372387</a>
+              </div>
+              <div className="flex items-center gap-2">
                 <MapPin className="h-3.5 w-3.5 text-slate-500 shrink-0" />
                 <span>Madurai, Tamil Nadu, India</span>
               </div>
@@ -92,7 +101,7 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
             Professional Profile
           </h2>
           <p className="text-sm text-slate-300 print:text-slate-700 leading-relaxed">
-            Final-year Artificial Intelligence & Data Science student with hands-on experience developing ML models, generative AI architectures, computer vision pipelines, and secure backend solutions. Proven record through competitive software internships and building production-ready projects targeting complex domains (healthcare, agriculture, cybersecurity, translation).
+            Results-driven Artificial Intelligence & Data Science Engineer with hands-on experience developing ML systems, LLM-powered applications, and Computer Vision solutions. Proven track record in building scalable AI backend pipelines, explainable deep learning models, and secure software architectures. Adept at leveraging state-of-the-art Generative AI and intelligent automation to solve complex product and research challenges in Agile environments.
           </p>
         </section>
 
@@ -108,8 +117,8 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
                 <p className="text-xs text-slate-400 print:text-slate-600">Karunya Institute of Technology and Sciences</p>
               </div>
               <div className="text-right text-xs font-mono">
-                <span className="block font-bold text-white print:text-slate-900">CGPA: 8.4</span>
-                <span className="text-slate-500 print:text-slate-600">2022 - Present</span>
+                <span className="block font-bold text-white print:text-slate-900">CGPA: 8.38 / 10.0</span>
+                <span className="text-slate-500 print:text-slate-600">2022 - 2026</span>
               </div>
             </div>
             
@@ -119,7 +128,7 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
                 <p className="text-xs text-slate-400 print:text-slate-600">Velammal Bodhi Campus</p>
               </div>
               <div className="text-right text-xs font-mono">
-                <span className="block font-bold text-white print:text-slate-900">Score: 83%</span>
+                <span className="block font-bold text-white print:text-slate-900">Score: 83.0%</span>
                 <span className="text-slate-500 print:text-slate-600">2020 - 2022</span>
               </div>
             </div>
@@ -135,19 +144,19 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
             <div>
               <h3 className="font-bold text-white print:text-slate-900 mb-1">Core AI & ML</h3>
               <p className="text-slate-400 print:text-slate-600 leading-relaxed">
-                Deep Learning, Computer Vision, Generative AI & LLMs, Prompt Engineering, OpenCV, MediaPipe, TensorFlow, Keras, Scikit-Learn
+                Machine Learning, Deep Learning, Generative AI, Large Language Models (LLMs), Computer Vision, Transfer Learning, Explainable AI (Grad-CAM), Prompt Engineering, Feature Engineering, Model Training & Evaluation
               </p>
             </div>
             <div>
               <h3 className="font-bold text-white print:text-slate-900 mb-1">Languages & DBs</h3>
               <p className="text-slate-400 print:text-slate-600 leading-relaxed">
-                Python, Java, C, SQL (MySQL, SQLite), JavaScript / TypeScript, PHP
+                Python, Java, C, SQL (MySQL, SQLite), JavaScript / TypeScript, PHP, HTML/CSS
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-white print:text-slate-900 mb-1">Tools & Frameworks</h3>
+              <h3 className="font-bold text-white print:text-slate-900 mb-1">Tools & Concepts</h3>
               <p className="text-slate-400 print:text-slate-600 leading-relaxed">
-                Git/GitHub, VS Code, Jupyter, Wireshark, VirtualBox, Linux, OOP, REST APIs, Agile
+                Git/GitHub, VS Code, Jupyter Notebook, Wireshark, VirtualBox, OOP, Data Structures, Algorithms, REST APIs, Agile Development, Cybersecurity Research
               </p>
             </div>
           </div>
@@ -165,15 +174,14 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
               <div className="flex justify-between items-start mb-1">
                 <div>
                   <h3 className="font-bold text-white print:text-slate-900 text-sm">AI Backend Intern</h3>
-                  <span className="text-xs font-semibold text-accent-cyan print:text-slate-700">BNTS</span>
+                  <span className="text-xs font-semibold text-accent-cyan print:text-slate-700">BNTS (US Non-Profit Education Organization)</span>
                 </div>
                 <span className="text-xs font-mono text-slate-500 print:text-slate-600">Oct 2024 - Mar 2025</span>
               </div>
               <ul className="list-disc list-inside text-xs text-slate-400 print:text-slate-600 space-y-1 pl-2">
-                <li>Built multilingual AI content translation pipelines supporting 10 languages using large language models.</li>
-                <li>Developed automated notes generation systems utilizing LLM routing and prompt constraints.</li>
-                <li>Created AI-powered quiz generation modules featuring strict schema outputs for SQL databases.</li>
-                <li>Integrated AI APIs and translation services into core backend workflows, optimizing token costs by 35%.</li>
+                <li>Architected and deployed multilingual AI content translation pipelines supporting 10 languages, reducing localization turnaround time by 40%.</li>
+                <li>Engineered an automated notes generation system using Large Language Models (LLMs) and advanced prompt engineering, increasing study material generation efficiency by 50%.</li>
+                <li>Integrated an AI-powered quiz generation module and optimized API latency for OpenAI/LLM backends by 25% to ensure scalable infrastructure.</li>
               </ul>
             </div>
 
@@ -182,15 +190,14 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
               <div className="flex justify-between items-start mb-1">
                 <div>
                   <h3 className="font-bold text-white print:text-slate-900 text-sm">Machine Learning Intern</h3>
-                  <span className="text-xs font-semibold text-accent-cyan print:text-slate-700">Intel Corporation</span>
+                  <span className="text-xs font-semibold text-accent-cyan print:text-slate-700">Intel</span>
                 </div>
                 <span className="text-xs font-mono text-slate-500 print:text-slate-600">May 2024 - Jul 2024</span>
               </div>
               <ul className="list-disc list-inside text-xs text-slate-400 print:text-slate-600 space-y-1 pl-2">
-                <li>Developed machine learning models for autonomous vehicle cut-in detection.</li>
-                <li>Performed raw data preprocessing, spatial image augmentation, and validation metrics evaluation.</li>
-                <li>Trained CNNs and Random Forest models, improving recall on critical vehicle actions by 8%.</li>
-                <li>Collaborated in Agile sprints, presenting check-point models to cross-functional teams.</li>
+                <li>Developed and trained Machine Learning models for autonomous vehicle cut-in detection, improving predictive accuracy of vehicle maneuvers.</li>
+                <li>Performed end-to-end data preprocessing, feature engineering, and class imbalance mitigation on large-scale sensor and telemetry datasets.</li>
+                <li>Conducted model training, cross-validation, and performance analysis to establish baseline models meeting safety-critical latency requirements.</li>
               </ul>
             </div>
 
@@ -204,9 +211,8 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
                 <span className="text-xs font-mono text-slate-500 print:text-slate-600">May 2024 - Jun 2024</span>
               </div>
               <ul className="list-disc list-inside text-xs text-slate-400 print:text-slate-600 space-y-1 pl-2">
-                <li>Strengthened software engineering fundamentals under senior developer mentorship.</li>
-                <li>Built structured backend logical scripts using C and Python.</li>
-                <li>Designed normalized SQL databases, writing optimized queries and sorting algorithms.</li>
+                <li>Programmed efficient backend business logic using Python and C, optimizing memory management and application runtime performance.</li>
+                <li>Implemented software engineering best practices, including modular design patterns, version control workflows, and unit testing.</li>
               </ul>
             </div>
           </div>
@@ -221,49 +227,49 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
           <div className="space-y-4 text-xs">
             <div>
               <h3 className="font-bold text-white print:text-slate-900">
-                VisionGuard AI: Retinal Disease Detection with Grad-CAM Explainability
+                VisionGuard AI | Explainable Eye Disease Detection
               </h3>
               <p className="text-slate-400 print:text-slate-600 mt-1">
-                <span className="font-semibold">Technology:</span> TensorFlow, Keras, Grad-CAM, OpenCV, Python
+                <span className="font-semibold">Technology:</span> TensorFlow, Keras, Deep Learning, Computer Vision
               </p>
               <p className="text-slate-400 print:text-slate-600 mt-1">
-                Engineered a custom deep transfer learning architecture using a ResNet50 backbone to classify 4 distinct retinal diseases from OCT scans. Integrated Grad-CAM to compute attention heatmaps, solving the clinical interpretability challenge. Achieved a validation accuracy of 94.2% and less than 220ms inference latency.
+                Built a deep learning healthcare platform using transfer learning (ResNet50/VGG16) to classify retinal eye diseases from OCT scans with 98.4% accuracy. Integrated Grad-CAM explainability to generate heatmaps visualising diagnostic decision regions, increasing trust for clinical decision support.
               </p>
             </div>
 
             <div>
               <h3 className="font-bold text-white print:text-slate-900">
-                AgriSense AI: Intelligent Crop & Fertilizer Recommendation Platform
+                ResumeAI Pro | Generative AI Career Assistant
               </h3>
               <p className="text-slate-400 print:text-slate-600 mt-1">
-                <span className="font-semibold">Technology:</span> Python, Scikit-Learn, HTML, CSS, Pandas
+                <span className="font-semibold">Technology:</span> Flask, OpenAI API, Generative AI, Prompt Engineering
               </p>
               <p className="text-slate-400 print:text-slate-600 mt-1">
-                Designed a decision support engine utilizing Random Forest and Gradient Boosted models to recommend crops and soil strategy based on N-P-K soil metrics. Reduced required input dimensions by 30% while maintaining 95.8% prediction accuracy.
+                Developed a Generative AI resume builder leveraging OpenAI APIs, Flask, and structured prompt engineering to optimize resumes for ATS compatibility. Built a vector-similarity match scoring system to analyze job descriptions against resumes, offering real-time keyword insertion recommendations.
               </p>
             </div>
 
             <div>
               <h3 className="font-bold text-white print:text-slate-900">
-                ResumeAI Pro: Generative AI ATS Career Assistant
+                AgriSense AI | Intelligent Crop & Fertilizer Recommendation Platform
               </h3>
               <p className="text-slate-400 print:text-slate-600 mt-1">
-                <span className="font-semibold">Technology:</span> Flask, OpenAI API, JSON Schema, HTML/CSS, Python
+                <span className="font-semibold">Technology:</span> Python, Scikit-Learn, Flask, Machine Learning
               </p>
               <p className="text-slate-400 print:text-slate-600 mt-1">
-                Built an ATS optimization assistant using GPT models. Configured strict JSON schema validators to prevent output hallucinations. Implemented token caching strategies, reducing operational costs by 40%.
+                Engineered an AI-driven agricultural decision support engine using Scikit-Learn to analyze soil composition (N, P, K, pH) and climate parameters. Achieved 100% crop classification accuracy (Random Forest) and 99.33% fertilizer recommendation accuracy (XGBoost), reducing fertilizer waste by 20–35%.
               </p>
             </div>
 
             <div>
               <h3 className="font-bold text-white print:text-slate-900">
-                Heartbleed Vulnerability Research Lab
+                Heartbleed Vulnerability Research & Security Analysis Lab
               </h3>
               <p className="text-slate-400 print:text-slate-600 mt-1">
-                <span className="font-semibold">Technology:</span> Python, Wireshark, VirtualBox, Linux, OpenSSL
+                <span className="font-semibold">Technology:</span> Python, Wireshark, VirtualBox, Linux
               </p>
               <p className="text-slate-400 print:text-slate-600 mt-1">
-                Simulated CVE-2014-0160 (Heartbleed) in host-only virtual environments. Analyzed raw packet-level TLS handshakes using Wireshark, capturing and mapping data leakage anomalies.
+                Constructed a secure, isolated sandbox environment using VirtualBox and Linux to analyze TLS heartbeat messages and intercept private keys. Conducted deep packet inspection using Wireshark to trace memory disclosure payloads during simulated Heartbleed exploits.
               </p>
             </div>
           </div>
@@ -274,12 +280,26 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
           <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500 print:text-slate-800 mb-3 border-b border-slate-800 print:border-slate-300 pb-1">
             Certifications
           </h2>
-          <ul className="list-disc list-inside text-xs text-slate-400 print:text-slate-600 space-y-1 pl-2">
-            {certifications.map((cert, idx) => (
-              <li key={idx}>{cert}</li>
-            ))}
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div>
+              <h4 className="font-bold text-white print:text-slate-950 mb-1">AI & Machine Learning</h4>
+              <p className="text-slate-400 print:text-slate-600 leading-relaxed">
+                Deep Learning with TensorFlow (Infosys) • Machine Learning using Python (Infosys) • AI Fundamentals with IBM (Cisco) • RPA Basics (Coursera)
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-white print:text-slate-950 mb-1">Data & Software Systems</h4>
+              <p className="text-slate-400 print:text-slate-600 leading-relaxed">
+                Data Analytics Essentials (Cisco) • Tableau and Data Analytics (Infosys) • Agile and GitHub (Infosys) • JavaScript Essentials 1 & 2 (Cisco) • Cybersecurity and Privacy (NPTEL) • Human Computer Interaction (NPTEL)
+              </p>
+            </div>
+          </div>
         </section>
+
+        {/* Last Updated metadata (Only visible in Print) */}
+        <div className="hidden print:block text-right text-[9px] text-slate-400 mt-6 border-t border-slate-200 pt-3">
+          Last Updated: June 2026 • Generated via bendavid95.github.io
+        </div>
 
       </div>
     </div>

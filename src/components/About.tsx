@@ -32,13 +32,13 @@ export default function About() {
           <div className="lg:col-span-7 flex flex-col gap-8">
             <div className="space-y-6 text-base leading-8 text-slate-300">
               <p>
-                I am a final-year B.Tech **Artificial Intelligence & Data Science** student with hands-on experience designing, training, and building models across Machine Learning, Deep Learning, Generative AI, Computer Vision, and Cybersecurity.
+                Results-driven **Artificial Intelligence & Data Science Engineer** with hands-on experience developing Machine Learning systems, LLM-powered applications, Computer Vision solutions, and cybersecurity research projects.
               </p>
               <p>
-                Through software internships and building complex projects, I have developed intelligent products ranging from AI-powered educational workflows and clinical retinal diagnosis platforms to predictive agricultural systems and security vulnerability labs.
+                Experienced in building scalable AI backend pipelines, explainable deep learning systems, and intelligent automation workflows.
               </p>
               <p>
-                I thrive at the intersection of technical engineering and entrepreneurship. I enjoy transforming research ideas into optimized, deployable software products, and I aspire to build and scale innovative AI startups in the future.
+                Passionate about applying Artificial Intelligence to solve real-world challenges across healthcare, agriculture, education, and cybersecurity domains.
               </p>
             </div>
 
@@ -81,10 +81,10 @@ export default function About() {
                 <div className="glass-panel p-6 rounded-2xl border border-white/5 hover:border-white/10 transition-all duration-200">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-mono font-semibold text-accent-purple">
-                      2022 – PRESENT
+                      2022 – 2026
                     </span>
                     <span className="flex items-center gap-1 rounded-md bg-accent-purple/10 px-2 py-0.5 text-xxs font-bold text-accent-purple border border-accent-purple/20">
-                      CGPA: 8.4
+                      CGPA: 8.38
                     </span>
                   </div>
                   <h4 className="font-display font-bold text-white text-base">
