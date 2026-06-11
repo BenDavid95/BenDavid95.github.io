@@ -44,7 +44,7 @@ export default function Footer() {
               <Mail className="h-4 w-4" />
             </a>
             <a
-              href="https://linkedin.com/in/bendavid-walker" // polished placeholder link
+              href="https://linkedin.com/in/bendavid-d-walker-c-228996249"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-white/5 p-2 text-slate-400 hover:bg-white/10 hover:text-white transition-all duration-200"

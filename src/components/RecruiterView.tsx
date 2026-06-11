@@ -80,7 +80,7 @@ export default function RecruiterView({ onBack }: RecruiterViewProps) {
               </div>
               <div className="flex items-center gap-2">
                 <LinkedinIcon className="h-3.5 w-3.5 text-slate-500 shrink-0" />
-                <a href="https://linkedin.com/in/bendavid-walker" className="hover:underline">linkedin.com/in/bendavid-walker</a>
+                <a href="https://linkedin.com/in/bendavid-d-walker-c-228996249" className="hover:underline">linkedin.com/in/bendavid-d-walker-c-228996249</a>
               </div>
             </div>
           </div>

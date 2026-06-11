@@ -140,7 +140,7 @@ export default function ContactForm() {
               </a>
 
               <a
-                href="https://linkedin.com/in/bendavid-walker"
+                href="https://linkedin.com/in/bendavid-d-walker-c-228996249"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all px-4 py-2.5 text-xs font-semibold text-slate-300 hover:text-white"
