@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-deep: #030014;
+  --color-bg-dark: #07041a;
+  --color-bg-obsidian: #0b0a1a;
+  --color-bg-card: rgba(255, 255, 255, 0.02);
+  --color-border-card: rgba(255, 255, 255, 0.05);
+  
+  --color-accent-blue: #3b82f6;
+  --color-accent-indigo: #6366f1;
+  --color-accent-purple: #8b5cf6;
+  --color-accent-fuchsia: #d946ef;
+  --color-accent-cyan: #06b6d4;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  
+  --animate-scanning: scanning 6s linear infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+
+  @keyframes scanning {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; filter: brightness(1.2); }
+  }
+}
+
+:root {
+  --background: #030014;
+  --foreground: #f8fafc;
+  color-scheme: dark;
+}
+
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030014;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1b4b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #312e81;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-heavy {
+  background: rgba(3, 0, 20, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Glow effects */
+.glow-indigo {
+  box-shadow: 0 0 40px -5px rgba(99, 102, 241, 0.15);
+}
+
+.glow-purple {
+  box-shadow: 0 0 40px -5px rgba(139, 92, 246, 0.15);
+}
+
+/* Gradients */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #ffffff 30%, #a78bfa 70%, #6366f1 100%);
+}
+
+.text-gradient-purple {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #a78bfa 0%, #c084fc 50%, #6366f1 100%);
+}
+
+.text-gradient-cyan {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #38bdf8 0%, #06b6d4 50%, #6366f1 100%);
+}
+
+/* Neural Canvas styling */
+.neural-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Recruiter print-ready Stylesheet */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Hide non-print elements */
+  nav, footer, .neural-canvas, button, .no-print, [role="button"] {
+    display: none !important;
+  }
+  
+  .print-page {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #0f172a !important;
+    page-break-after: avoid;
+  }
+  
+  a {
+    color: #1e3a8a !important;
+    text-decoration: underline !important;
+  }
+  
+  /* Force columns or grid elements to layout cleanly in black and white */
+  .grid {
+    display: block !important;
+  }
+  
+  .grid > * {
+    margin-bottom: 15px !important;
+    page-break-inside: avoid;
+  }
+  
+  .glass-panel {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 10px 0 !important;
+    backdrop-filter: none !important;
+  }
+
+  .border-white\/10, .border-white\/5 {
+    border-color: #cbd5e1 !important;
+  }
+
+  .text-slate-400, .text-slate-500, .text-zinc-400 {
+    color: #475569 !important;
+  }
+
+  .bg-white\/5, .bg-white\/10 {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+  }
+}
